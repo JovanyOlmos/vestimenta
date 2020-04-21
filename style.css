@@ -1,0 +1,54 @@
+body{
+    background-color: #F2EDE4;
+}
+
+.separador-nav {
+    color: #F2EDE4;
+}
+
+#header {
+    background-color: #261201;
+}
+
+#header a {
+    color: #F2EDE4;
+}
+
+#header a:hover {
+    color: #A6958F;
+}
+
+#nav-dropmenu {
+    background-color: #261201;
+    border: 1px;
+    border-color: #F2EDE4;
+}
+
+#item-dropmenu {
+    border-bottom: 1px;
+    border-color: #F2EDE4;
+}
+
+#item-dropmenu:hover {
+    color: #261201;
+}
+
+.carousel-inner {
+    height: 80vh;
+    width: 100%;
+}
+
+.carousel-item {
+    height: 80vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+}
