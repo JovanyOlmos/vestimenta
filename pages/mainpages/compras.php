@@ -30,7 +30,4 @@
 </div>
 
 </div>
-
-
-
-
+<?php require('../templates/footerBottom.php'); ?>
