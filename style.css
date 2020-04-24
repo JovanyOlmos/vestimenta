@@ -7,6 +7,20 @@ Colores utilizados
 #A6958F
 */
 
+.bgLogIn{
+    background-color: #E2E1E6;
+}
+
+.bgLogInForm{
+    background-color: #474A59;
+    margin: 0 auto;
+}
+
+.bgLogInCard{
+    background-color: #FFFFFF;
+    width: 70%;
+}
+
 footer{
     position: abosolute;
     padding-top: 550px;

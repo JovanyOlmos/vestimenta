@@ -1,10 +1,10 @@
 
 <?php require('../templates/metaHeader.php'); ?>
 
-<div class="container m-5 ">
+<div class="container m-5">
     
-    <div class="row">
-        <div class="col-6">
+    <div class="row bgLogInCard">
+        <div class="col-6 p-5">
             <h1><b>Login</b></h1>
 
             <p>
@@ -15,7 +15,7 @@
              </p>
         </div>
 
-        <div class="col-6">
+        <div class="col-6 bgLogInForm p-5">
         
             <form action="" method="post">
 
@@ -31,7 +31,7 @@
               <small id="helpId" class="text-muted"></small>
             </div>
 
-            <button type="submit"  class="btn btn-primary btn-lg btn-block btn-outline"> Entrar </button>
+            <button type="submit"  class="btn btn-outline-primary btn-block"> Entrar </button>
 
 
 
@@ -46,4 +46,4 @@
 </div>
 
 
-<?php require('../templates/footerBottom.php'); ?>
+<?php require('../templates/metaFooter.php'); ?>
