@@ -8,17 +8,22 @@ Colores utilizados
 */
 
 .bgLogIn{
+    text-align: justify;
     background-color: #E2E1E6;
+    padding: 30px;
+    width: 30%;
 }
 
 .bgLogInForm{
+    
     background-color: #474A59;
-    margin: 0 auto;
+    padding: 30px;
 }
 
 .bgLogInCard{
-    background-color: #FFFFFF;
+    
     width: 70%;
+    margin: 0 auto;
 }
 
 footer{

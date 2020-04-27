@@ -1,48 +1,38 @@
 
 <?php require('../templates/metaHeader.php'); ?>
 
-<div class="container m-5">
+<div class="mt-5  container  middle">
     
-    <div class="row bgLogInCard">
-        <div class="col-6 p-5">
-            <h1><b>Login</b></h1>
-
-            <p>
-             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-             Qui pariatur libero voluptate tempore repellat nulla ducimus quam, 
-             maiores vel unde alias quasi sapiente blanditiis labore perferendis. 
-             Quis doloremque nam culpa?
-             </p>
-        </div>
-
-        <div class="col-6 bgLogInForm p-5">
-        
-            <form action="" method="post">
-
-            <div class="form-group">
-              <label for="">Email</label>
-              <input type="text" required  class="form-control" placeholder="Usuario" >
-              <small id="helpId" class="text-muted"></small>
-            </div>
-
-            <div class="form-group">
-              <label for="">Contraseña</label>
-              <input type="password" required class="form-control" placeholder="Contraseña" >
-              <small id="helpId" class="text-muted"></small>
-            </div>
-
-            <button type="submit"  class="btn btn-outline-primary btn-block"> Entrar </button>
-
-
-
-            
-            </form>
-
-        </>
-
+   <div class="row bgLogInCard">
+    <div class="col-6  bgLogIn">
+      <h1>LogIn</h1>
+      <p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+       Officiis delectus iste culpa eaque, aperiam eum atque repellat cum, 
+       facere enim veritatis dolor beatae aliquid ut eos odit aut quos temporibus?
+      </p>
     </div>
 
+    <div class="col-6 pl-0">
+      <div class="container bgLogInForm">
+        <form>
+          <div class="form-group ">
+            <label for="">Usuario</label>
+            <input type="text" class="form-control" >
+            <small id="helpId" class="text-muted">Help text</small>
+          </div>
 
+          <div class="form-group">
+            <label for="">Contraseña</label>
+            <input type="password" class="form-control" >
+            <small id="helpId" class="text-muted">Help text</small>
+          </div>
+          
+          <button type="submit" class="btn btn-outline-primary btn-block ">Action</button>
+        </form>
+      </div>
+    </div>
+   </div>
 </div>
 
 
