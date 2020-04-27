@@ -348,3 +348,28 @@ footer a {
 footer a:hover {
     color: #F24444;
 }
+
+.bgLogIn{
+    text-align: justify;
+    background-color: #E2E1E6;
+    padding: 30px;
+    width: 30%;
+}
+
+.bgLogInForm{
+    
+    background-color: #474A59;
+    padding: 30px;
+}
+
+.bgLogInCard{
+    
+    width: 70%;
+    margin: 0 auto;
+}
+
+footer{
+    position: abosolute;
+    padding-top: 550px;
+
+}
