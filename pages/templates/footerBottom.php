@@ -1,6 +1,34 @@
 
-<footer class='footer'>
-   hola desde el footer
+<footer>
+   <nav class="navbar navbar-expand-lg">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="#">Vestimenta</a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="#">Sobre nosotros</a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="#">Contactanos</a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="#">FAQ</a>
+            </li>
+         </ul>
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+         </ul>
+      </div>
+   </nav>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
