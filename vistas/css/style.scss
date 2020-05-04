@@ -22,6 +22,30 @@ Colores resaltantes
 body{
     background-color: #fff;
 }
+
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+    width: 100%;
+}
+
+th, td {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: #F2EDE4;
+}
+
+th {
+    background-color: #8C030E;
+    color: #fff;
+}
+
+td {
+    border-bottom: 1px solid rgb(104, 104, 104);
+}
 /********************************************************************/
 
 /*******************************Cabecera general***********************/
@@ -240,6 +264,9 @@ sirve para publicitar en la pagina*/
     transition: ease-in 0.3s;
 }
 
+#number-box {
+    width: 5vw;
+}
 
 /****************************Nuevos botones**********************************/
 .btn-principal {
@@ -748,4 +775,31 @@ sirve para publicitar en la pagina*/
     font-size: 3vh;
     padding-top: 3vh;
     padding-bottom: 3vh;
+}
+/**************************************************************************************************************/
+
+/*************************************************Carrito********************************************************/
+#cart-content {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+#img-product-cart {
+    height: 20vh;
+    width: 20vh;
+}
+
+#btn-delete {
+    color: #F24444;
+}
+
+#last-row {
+    border-bottom: none;
+}
+
+#cart-options {
+    padding-top: 2vh;
+    padding-left: 70%;
 }
