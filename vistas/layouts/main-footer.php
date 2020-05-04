@@ -3,16 +3,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav mr-auto">
                           <li class="nav-item active">
-                            <a class="nav-link" href="#">Vestimenta</a>
+                            <a class="nav-link" href="index.php">Vestimenta</a>
                           </li>
                           <li class="nav-item active">
-                            <a class="nav-link" href="#">Sobre nosotros</a>
+                            <a class="nav-link" href="about-us.php">Sobre nosotros</a>
                           </li>
                           <li class="nav-item active">
-                            <a class="nav-link" href="#">Contactanos</a>
+                            <a class="nav-link" href="contact-us.php">Contactanos</a>
                           </li>
                           <li class="nav-item active">
-                            <a class="nav-link" href="#">FAQ</a>
+                            <a class="nav-link" href="faq.php">FAQ</a>
                           </li>
                         </ul>
                         <ul class="navbar-nav ml-auto">

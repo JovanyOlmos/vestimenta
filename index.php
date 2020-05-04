@@ -1,4 +1,5 @@
 <?php
+  session_start();
   require("./vistas/layouts/main-header.php");
 ?>
             <div id="carousel-fixed">
@@ -46,7 +47,7 @@
                       </div>
                 </div>
             </div>
-            <div id="content">
+            <div id="content-with-carousel">
                 <div id="shopping-block">
                   <div id="block-title">
                     <h2>Encuentra lo que necesitas</h2>
@@ -114,5 +115,5 @@
                   </div>
                 </div>
 <?php
-  require("./vistas/layouts/main-footer.php");
+  require("./vistas/layouts/main-footer.php");  
 ?>

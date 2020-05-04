@@ -1,0 +1,751 @@
+/*
+Colores utilizados
+#F2EDE4
+#261201
+#A6774E
+#735C48
+#A6958F
+*/
+/*
+Colores resaltantes
+#8C030E
+#038C7F
+#96D9CC
+#F27405
+#F24444
+*/
+/*******************************A todas las paginas*****************/
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-color: #fff;
+}
+/********************************************************************/
+
+/*******************************Cabecera general***********************/
+#normal-header {
+    position: fixed;
+    width: 100%;
+    height: 13vh;
+    z-index: 3;
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.3);
+}
+
+.separador-nav {
+    color: #F2EDE4;
+}
+
+#normal-header {
+    /*background-color: #261201;*/
+    background-color: #fff;
+}
+
+#normal-header a {
+    /*color: #F2EDE4;*/
+    color: #000;
+}
+
+#normal-header a:hover {
+    color: #F24444;
+}
+
+#nav-dropmenu {
+    /*background-color: #261201;*/
+    background-color: #fff;
+    border: 1px;
+    border-color: #F2EDE4;
+}
+
+#item-dropmenu {
+    border-bottom: 1px;
+    border-color: #F2EDE4;
+}
+
+#item-dropmenu:hover {
+    color: #261201;
+}
+/************************************************************/
+
+
+/*****************************Slider principal************************/
+/*Este carrusel se usa al inicio de la pagina principal y esta por debajo del contenido*/
+#carousel-fixed {
+    position: fixed;
+    top: 13vh;
+    z-index: 1;
+    height: 87vh;
+    width: 100%;
+}
+
+.carousel-inner {
+    height: 87vh;
+    width: 100%;
+}
+
+.carousel-item {
+    height: 87vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+#slide1 {
+    width: 100%;
+    height: 100%;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/primVer2020.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#slide2 {
+    width: 100%;
+    height: 100%;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/hombres2020.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#slide3 {
+    width: 100%;
+    height: 100%;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/playaRopa.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/************************************************************************/
+
+
+/*******************************Cuerpo del contenido**********************/
+/*Todo el contenido de la pagina index o cualquier otra con carousel y solo con carousel
+ debe estar dentro de la etiqueta content-with-carousel, si la pagina no tiene carousel
+ usar la etiqueta content-without-carousel*/
+#content-with-carousel{
+    position: absolute;
+    z-index: 2;
+    top: 100vh;
+    background-color: #fff;
+    width: 100%;
+}
+
+#content-without-carousel{
+    position: absolute;
+    z-index: 2;
+    top: 13vh;
+    width: 100%;
+}
+
+/*************************************************************************/
+
+
+/********************************Bloque de contenido***************************/
+/*El bloque de contenido es un pequeno bloque donde hay informacion sobre ofertas o alguna prenda o marca 
+sirve para publicitar en la pagina*/
+#block-title {
+    width: 100%;
+    padding-left: 7vw;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+}
+
+#block-body-info {
+    width: 100%;
+    height: 80vh;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/tendencias2020.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#block-body-info h3{
+    color: #fff;
+    padding-top: 40vh;
+    padding-left: 10vw;
+    padding-right: 5vw;
+    width: 50%;
+    position: absolute;
+}
+
+#block-body-info div {
+    background-color: #fff;
+    width: 25vw;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: 50vw;
+}
+
+#block-body-info div h5{
+    color: #000;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 50%;
+}
+
+#block-body-info div p{
+    color: #000;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 40%;
+}
+/***********************************************************************/
+
+
+/*************************Alteracion de los inputs************************/
+.form-control {
+    border-radius: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.form-control:focus, .btn:focus {
+    border-color: #F24444;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    transition: ease-in 0.3s;
+}
+
+
+/****************************Nuevos botones**********************************/
+.btn-principal {
+    background-color: #F24444;
+    font-size: 2.5vh;
+    padding: 5vh, 5vw;
+    border-color: #F24444;
+    color: #fff;
+}
+
+.btn-secundario {
+    background-color: #F27405;
+    font-size: 2.5vh;
+    padding: 5vh, 5vw;
+    border-color: #F27405;
+    color: #fff;
+}
+
+.btn-informacion {
+    background-color: #96D9CC;
+    font-size: 2.5vh;
+    padding: 5vh, 5vw;
+    border-color: #96D9CC;
+    color: #fff
+}
+
+.btn-exito {
+    background-color: #038C7F;
+    font-size: 2.5vh;
+    padding: 5vh, 5vw;
+    border-color: #038C7F;
+    color: #fff;
+}
+
+.btn-peligro {
+    background-color: #8C030E;
+    font-size: 2.5vh;
+    padding: 5vh, 5vw;
+    border-color: #8C030E;
+    color: #fff;
+}
+
+.btn-secundario:hover {
+    background-color: rgba(252,126,15,1);
+    border-color: rgba(252,126,15,1);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.btn-informacion:hover {
+    background-color: rgba(170,227,224,1);
+    border-color: rgba(170,227,224,1);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+}
+.btn-exito:hover {
+    background-color: rgba(13,150,137,1);
+    border-color: rgba(13,150,137,1);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.btn-peligro:hover {
+    background-color: rgba(150,13,24,1);
+    border-color: rgba(150,13,24,1);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.btn-principal:hover {
+    background-color: rgba(252,88,88,1);
+    border-color: rgba(252,88,88,1);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+}
+/*********************************************************************************/
+
+/********************************Seccion para poner el correo**********************/
+#block-newsletter {
+    width: 100%;
+    height: 50vh;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/newsletter.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 10vh;
+}
+
+#block-newsletter .form-inline {
+    background-color: #fff;
+    padding-left: 2vw;
+    padding-top: 2vh;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+    border-radius: 3px;
+}
+
+#block-newsletter form {
+    width: 40vw;
+    margin-left: 30vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#block-newsletter h3 {
+    padding-top: 10vh;
+    color: #fff;
+    text-align: center;
+}
+
+#block-newsletter p {
+    color: #fff;
+    text-align: center;
+}
+/**********************************************************************************/
+
+
+/******************************Pie de pagina para paginas generales******************/
+#normal-footer {
+    background-color: #fff;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+#normal-footer a {
+    color: #000;
+}
+
+#normal-footer a:hover {
+    color: #F24444;
+}
+/*************************************************************************************/
+
+
+/*************************LogIn & SignUp *************************************/
+/*************************Template para signup y login*********************************/
+#login-template {
+    height: 100vh;
+    width: 100%;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/login.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#register-template {
+    height: 100vh;
+    width: 100%;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/register.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#info-square {
+    position: absolute;
+    height: 50vh;
+    background-color: #fff;
+    width: 33%;
+    left: 15%;
+    top: 25vh;
+}
+
+#info-square h1 {
+    position: relative;
+    text-align: center;
+    top: 20%;
+    font-weight: bolder;
+    padding: 1vw;
+} 
+
+#info-square p{
+    position: relative;
+    text-align: justify;
+    top: 10%;
+    padding: 2vw;
+}
+
+#form-square {
+    position: absolute;
+    height: 60vh;
+    background-color: #F2EDE4;
+    width: 33%;
+    left: 48%;
+    top: 20vh;
+    -webkit-box-shadow: 0px 0px 34px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 34px 11px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 34px 11px rgba(0,0,0,0.75);
+    padding-bottom: 4vh;
+    padding-top: 4vh;
+}
+
+#login-form, #login-form form {
+    height: 100%;
+    padding-top: 3vh;
+    padding-left: 2.5vw;
+}
+
+#login-form button {
+    margin-left: 35%;
+}
+
+#login-form #logo-login {
+    position: relative;
+    width: 20vh;
+    height: 20vh;
+    left: 35%;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+}
+
+#login-form #logo-register {
+    position: relative;
+    width: 15vh;
+    height: 15vh;
+    left: 40%;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+}
+/*******************************************************************************/
+/****************************Cabecera y pie de pagina para template de signup y login********************/
+
+#special-header {
+    position: relative;
+    top: 0;
+    height: 10vh;
+}
+
+#special-footer {
+    position: relative;
+    top: 80vh;
+    height: 10vh;
+}
+
+#special-footer a, #special-header a {
+    color: #fff;
+}
+
+#special-footer a:hover, #special-header a:hover {
+    color: #F24444;
+}
+/********************************************************************************************/
+/********************************************************************************************/
+
+#block-products {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+}
+
+#item-card {
+    height: 70vh;
+    display: inline-block;
+    margin: 0px;
+    width: 29vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
+
+#item-image {
+    width: 100%;
+    height: 50%;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+#item-card h5 {
+    width: 100%;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+#item-card p {
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+}
+
+#item-footer {
+    padding-top: 3vh;
+}
+
+#item-footer h6 {
+    display: inline-block;
+}
+
+#item-footer a {
+    display: inline-block;
+    position: relative;
+    justify-content: end;
+}
+
+#item-footer i {
+    color: #F24444;
+}
+
+#buttons-item-footer {
+    display: inline-block;
+    padding-left: 17vw;
+}
+/******************************************************************************************/
+
+/**************************************About Us*********************************************/
+#about-top {
+    height: 80vh;
+    width: 100%;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/aboutus.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#about-top h1 {
+    color: #fff;
+    padding-top: 20vh;
+    font-size: 5vw;
+    text-align: center;
+}
+
+#about-top p {
+    color: #fff;
+    text-align: center;
+    font-size: 3vw;
+    padding-top: 7vh;
+}
+
+#mini-blog {
+    padding-top: 20vh;
+    padding-right: 25vw;
+    padding-left: 25vw;
+}
+
+#adorno {
+    background-color: #F27405;
+    height: 1vh;
+    width: 25%;
+}
+
+#mini-blog h1 {
+    text-align: center;
+    color: #000;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+}
+
+#mini-blog p {
+    font-size: 5vh;
+    text-align: center;
+    color: rgb(104, 104, 104);
+}
+
+/**********************************************FAQ page******************************************************/
+
+
+#faq-section {
+    list-style: none;
+    width: 25%;
+    padding-left: 0;
+    position: relative;
+    display: inline-block;
+    left: 3vw;
+    -webkit-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.3);
+}
+
+#faq-section li {
+    font-size: 4vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: #F2EDE4;
+    text-align: center;
+}
+
+#faq-section li a {
+    text-decoration: none;
+    color: #000;
+}
+
+#faq-section li a:hover {
+    color: #F24444;
+}
+
+#question-section {
+    position: absolute;
+    display: inline-block;
+    width: 68%;
+    left: 30vw;
+}
+
+#questions {
+    list-style: none;
+    position: absolute;
+    display: none;
+}
+
+#questions li{
+    border-bottom: 1px solid rgb(104, 104, 104);
+    font-size: 4vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 100%;
+}
+
+#questions li span {
+    margin-left: 45vw;
+    font-size: 14px;
+}
+
+#questions li a {
+    color: #000;
+    text-decoration: none;
+}
+
+#questions li a:hover {
+    color: #F24444;
+    text-decoration: none;
+}
+
+.respuestas {
+    display: none;
+}
+
+#questions #s1-r1:target, 
+#questions #s1-r2:target, 
+#questions #s1-r3:target, 
+#questions #s1-r4:target, 
+#questions #s1-r5:target,
+#questions #s2-r1:target, 
+#questions #s2-r2:target, 
+#questions #s2-r3:target, 
+#questions #s2-r4:target, 
+#questions #s2-r5:target,
+#questions #s3-r1:target, 
+#questions #s3-r2:target, 
+#questions #s3-r3:target, 
+#questions #s3-r4:target, 
+#questions #s3-r5:target,
+#questions #s4-r1:target, 
+#questions #s4-r2:target, 
+#questions #s4-r3:target, 
+#questions #s4-r4:target, 
+#questions #s4-r5:target,
+#questions #s5-r1:target, 
+#questions #s5-r2:target, 
+#questions #s5-r3:target, 
+#questions #s5-r4:target, 
+#questions #s5-r5:target,
+#questions #s6-r1:target, 
+#questions #s6-r2:target, 
+#questions #s6-r3:target, 
+#questions #s6-r4:target, 
+#questions #s6-r5:target {
+    display: block;
+}
+/*************************************************************************************************************/
+
+/*********************************************Ficha de contacto***********************************************/
+#block-contact {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: justify;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    left: 25vw;
+}
+
+#block-contact p {
+    font-size: 3vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
