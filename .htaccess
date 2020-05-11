@@ -1,9 +1,6 @@
-# Impide ver el directorio
-
-# Options All -Indexes
-
-# URL amigables
-
-# RewriteEngine On
-
-# RewriteRule ^([-a-zA-Z0-9/]+)$ index.php?ruta=$1
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule  ^$ default/public/    [L]
+    RewriteRule  (.*) default/public/$1 [L]
+</IfModule>
