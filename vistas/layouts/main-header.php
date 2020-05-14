@@ -44,22 +44,22 @@
                           </li>
                         </ul>
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li class="nav-item active">
-                                <h3 class="separador-nav">|</h3>
-                            </li>
                             <?php
                               if(!isset($_SESSION['nickname']))
                               {
                                 echo '<li class="nav-item active">
+                                  <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <h3 class="separador-nav">|</h3>
+                              </li>
+                                <li class="nav-item active">
                                     <a href="signup.php" class="nav-link">Registrate</a>
                                 </li>
                                 <li class="nav-item active">
@@ -71,15 +71,48 @@
                               }
                               else
                               {
-                                echo '<li class="nav-item active">
-                                    <a href="#" class="nav-link">Hola '.$_SESSION['nickname'].'</a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a href="#" class="nav-link"><i class="fas fa-cart-plus"></i></a>
-                                </li>';
+                                echo '<li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Hola '.$_SESSION['nickname'].' <i class="fas fa-user-circle"></i>
+                                </a>
+                                <div  id="nav-dropmenu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mi Perfil</a>
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mis Deseos</a>
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mi Carrito</a>
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Cerrar Sesion</a>
+                                </div>
+                              </li>';
                               }
                             ?>
                         </ul>
                     </div>
                 </nav>
             </header>
+            <div class="my-modal">
+                <div class="my-body-modal">
+                  <h2>Swetter</h2>
+                  <img src="./vistas/images/swetter.jpg">
+                  <div id="descripciones">
+                    <p>Descripcion de la ropa</p>
+                    <p>Descripcion de tallas</p>
+                  </div>
+                  <form>
+                    <label>Escoja el numero de prendas</label>
+                    <input type="number" class="form-control" value="1"></input>
+                    <select class="form-control form-control-sm">
+                      <option value="0">Seleccione talla</option>
+                      <option value="xs">XS</option>
+                      <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                      <option value="xxl">XXL</option>
+                      <option value="xxxl">XXXL</option>
+                    </select>
+                    <div id="botones-modal">
+                      <a class="btn btn-secundario" id="cancel-modal" href="#">Cancelar</a>
+                      <input type="submit" class="btn btn-principal" value="Agregar al carrito"></input>
+                    </div>
+                  </form>
+                </div>
+            </div>
