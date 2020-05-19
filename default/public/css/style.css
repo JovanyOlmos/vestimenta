@@ -108,7 +108,7 @@ body{
     background-image:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url("../img/primVer2020.jpg");
+    ), url("../images/primVer2020.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -121,7 +121,7 @@ body{
     background-image:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url("../img/hombres2020.jpg");
+    ), url("../images/hombres2020.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -134,7 +134,7 @@ body{
     background-image:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url("../img/playaRopa.jpg");
+    ), url("../images/playaRopa.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -171,7 +171,7 @@ sirve para publicitar en la pagina*/
     background-image:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url("../img/tendencias2020.jpg");
+    ), url("../images/tendencias2020.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -324,7 +324,7 @@ sirve para publicitar en la pagina*/
     background-image:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url("../img/newsletter.jpg");
+    ), url("../images/newsletter.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -388,7 +388,7 @@ sirve para publicitar en la pagina*/
     background-image:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url("../img/login.jpg");
+    ), url("../images/login.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -401,7 +401,7 @@ sirve para publicitar en la pagina*/
     background-image:  linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url("../img/register.jpg");
+    ), url("../images/register.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

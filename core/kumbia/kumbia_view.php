@@ -37,7 +37,7 @@ class KumbiaView
      *
      * @var string
      */
-    protected static $_template = 'default';
+    protected static $_template = 'vestimenta/default';
     /**
      * Indica el tipo de salida generada por el controlador.
      *

@@ -1,0 +1,29 @@
+<?= View::partial('layouts/special-headerL'); ?>
+
+<div id="info-square">
+    <h1>Ya eres parte del club?</h1>
+    <p>Ingresa los datos de tu cuenta para acceder a la comunidad y obtener las prendas del momento.
+        <?= View::content() ?>
+    </p>
+</div>
+<div id="form-square">
+    <div class="container bgLogInForm" id="login-form">
+
+        <?= Html::img('logoB.png', '', "id = 'logo-login' ") ?>
+        <?= Form::open() ?>
+            <div class="form-inline">
+                <i class="fas fa-user"></i>
+                <?= Form::text( 'nickname', 'class="form-control" placeholder="Usuario') ?>
+            </div>
+            <div class="form-inline">
+                <i class="fas fa-key"></i>
+                <?= Form::password('password', 'class="form-control" placeholder="Contraseña"') ?>
+                
+            </div>
+            <?= Form::submit('Ingresar', 'class="btn btn-principal"' ) ?>
+        <?= Form::close() ?>
+    </div>
+</div>
+
+
+<?= View::partial('layouts/special-footer');

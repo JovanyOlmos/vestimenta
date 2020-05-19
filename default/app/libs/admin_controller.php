@@ -20,6 +20,12 @@ class AdminController extends Controller
 
     final protected function initialize()
     {
+        if( Auth::is_valid() )
+            return true;
+
+        Redirect::to('login');
+        return false;
+       
         //Código de auth y permisos
         //Será libre, pero añadiremos uno por defecto en breve
         //Posiblemente se cree una clase abstracta con lo que debe tener por defecto
