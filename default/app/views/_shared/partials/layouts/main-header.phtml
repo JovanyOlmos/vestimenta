@@ -4,9 +4,11 @@
             <meta charset="UTF-8">
             <meta name="Vestimenta" content="Tienda de ropa en linea">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          
+
             <?= View::partial('commons/metainfoheader') ?>
-         
+           
+ 
+           
             <meta http-equiv="Expires" content="0">
             <meta http-equiv="Last-Modified" content="0">
             <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
@@ -16,7 +18,7 @@
             <header id="normal-header">
                 <nav class="navbar navbar-expand-lg" id="header">
                     <a class="navbar-brand" href="#">
-                        <img src="./vistas/images/logo.png" width="60" height="50" alt="">
+                      <?= Html::img('../images/logo.png', ' width="60" height="50"') ?>
                     </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav mr-auto">
@@ -42,20 +44,20 @@
                           </li>
                         </ul>
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li class="nav-item active">
-                                <h3 class="separador-nav">|</h3>
-                            </li>
-                            <?php if( !Auth::is_valid() ) : ?>
+                            <?php  if( !Auth::is_valid() ) : ?>
+                             <li class="nav-item active">
+                                  <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                              </li>
                               <li class="nav-item active">
+                                  <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li class="nav-item active">
+                                  <h3 class="separador-nav">|</h3>
+                              </li>
+                                <li class="nav-item active">
                                     <a href="signup.php" class="nav-link">Registrate</a>
                                 </li>
                                 <li class="nav-item active">
@@ -64,17 +66,54 @@
                                 <li class="nav-item active">
                                     <a href="login.php" class="nav-link">Ingresa</a>
                                 </li>
-                            <?php else:  ?>
-                              <li class="nav-item active">
-                                    <a href="#" class="nav-link">
-                                      <?= 'Hola '. Auth::get('nickname') ?>
-                                    </a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a href="#" class="nav-link"><i class="fas fa-cart-plus"></i></a>
-                                </li>
-                            <?php endif ?>
+                                <?php else : ?>
+                                <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  
+                                  <?= 'Hola '. Auth::get('nickname') ?>
+                                  <i class="fas fa-user-circle"></i>
+                                </a>
+                                <div  id="nav-dropmenu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mi Perfil</a>
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mis Deseos</a>
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mi Carrito</a>
+                                  <?= Html::link( 'Login/logout', 'Cerrar Sesion', 'class="dropdown-item nav-link" id="item-dropmenu"') ?>
+                                </div>
+                              </li>
+                              <?php endif ?>
                         </ul>
                     </div>
                 </nav>
             </header>
+            <!--
+            <div class="my-modal">
+                <div class="my-body-modal">
+                  <h2>Swetter</h2>
+                  <img src="./vistas/images/swetter.jpg">
+                  <div id="descripciones">
+                    <p>Descripcion de la ropa</p>
+                    <p>Descripcion de tallas</p>
+                  </div>
+                  <form>
+                    <label>Escoja el numero de prendas</label>
+                    <input type="number" class="form-control" value="1"></input>
+                    <select class="form-control form-control-sm">
+                      <option value="0">Seleccione talla</option>
+                      <option value="xs">XS</option>
+                      <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                      <option value="xxl">XXL</option>
+                      <option value="xxxl">XXXL</option>
+                    </select>
+                    <div id="botones-modal">
+                      <a class="btn btn-secundario" id="cancel-modal" href="#">Cancelar</a>
+                      <input type="submit" class="btn btn-principal" value="Agregar al carrito"></input>
+                    </div>
+                  </form>
+                </div>
+                                
+            </div>
+                                -->
+                                

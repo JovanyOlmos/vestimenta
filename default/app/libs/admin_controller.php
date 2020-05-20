@@ -23,7 +23,7 @@ class AdminController extends Controller
         if( Auth::is_valid() )
             return true;
 
-        Redirect::to('login');
+        Redirect::to('Login');
         return false;
        
         //Código de auth y permisos

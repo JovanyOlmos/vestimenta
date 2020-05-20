@@ -1,0 +1,26 @@
+<?= View::partial('layouts/special-headerR'); ?>
+
+<div id="info-square">
+                    <h1>Bienvenido</h1>
+                    <p>Llena los campos para obtener tu cuenta y ser parte de la comunidad de moda mas grande de Mexico</p>
+                </div>
+                <div id="form-square">
+                    <div class="container bgLogInForm" id="login-form">
+                        <?= Html::img('../images/logo.png') , 'id="logo-register'?>
+                        <?= Form::open() ?>
+                            <div class="form-inline">
+                                <i class="fas fa-user"></i>
+                                <?= Form::text('nickname', 'name="usuario" class="form-control" placeholder="Usuario"') ?>
+                            </div>
+                            <div class="form-inline">
+                                <i class="fas fa-key"></i>
+                                <?= Form::password('password', 'name="password" class="form-control" placeholder="Contraseña') ?>
+
+                            </div>
+                
+                            <?= Form::submit('submit', 'class="btn btn-principal"') ?>
+                          <?= Form::close() ?>
+                        </div>
+                </div>
+
+<?= View::partial('layouts/special-footer'); ?>

@@ -3,6 +3,7 @@
     class LoginController extends AppController{	
         public function index()
         {
+            View::template(NULL);
             if( Input::hasPost('password', 'nickname') ){
                 $nick = Input::post('nickname');
                 $pass = Input::post('password');
@@ -21,6 +22,8 @@
 
         public function logout()
         {
+            View::template(NULL);
+
             View::select(NULL, NULL);
             Auth::destroy_identity();
             Redirect::to('Login');
