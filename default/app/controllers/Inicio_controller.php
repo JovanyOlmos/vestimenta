@@ -8,7 +8,7 @@ class InicioController extends AppController
         $this->elementos = (new categoria)->find();
     }
 
-    public function contactanos()
+    public function contactus()
     {
 
     }
@@ -18,15 +18,30 @@ class InicioController extends AppController
 
     }
 
-    public function sobre()
+    public function aboutus()
     {
 
     }
 
-    public function login()
+    public function product()
     {
- 
+
     }
+
+    public function shopping()
+    {
+
+    }
+
+    public function mycart()
+    {
+
+    }
+
+
+
+
+
 
     public function signup()
     {

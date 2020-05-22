@@ -20,6 +20,11 @@
             }
         }
 
+        public function signup()
+        {
+            # code...
+        }
+
         public function logout()
         {
             View::template(NULL);
