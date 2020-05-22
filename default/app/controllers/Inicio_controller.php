@@ -8,7 +8,7 @@ class InicioController extends AppController
         $this->elementos = (new categoria)->find();
     }
 
-    public function contactanos()
+    public function contactus()
     {
 
     }
@@ -18,7 +18,7 @@ class InicioController extends AppController
 
     }
 
-    public function sobre()
+    public function aboutus()
     {
 
     }
