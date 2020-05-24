@@ -4,72 +4,66 @@
     include("./vistas/modules/shopping-items.php");
     if(isset($_GET["temporada"])){ $temporada=$_GET["temporada"]; } else { $temporada=NULL; }
     if(isset($_GET["categoria"])){ $categoria=$_GET["categoria"]; } else { $categoria=NULL; }
-    if(isset($_POST["xs"])){ $xs=$_POST["xs"]; } else { $xs=NULL; }
-    if(isset($_POST["s"])){ $s=$_POST["s"]; } else { $s=NULL; }
-    if(isset($_POST["m"])){ $m=$_POST["m"]; } else { $m=NULL; }
-    if(isset($_POST["l"])){ $l=$_POST["l"]; } else { $l=NULL; }
-    if(isset($_POST["xl"])){ $xl=$_POST["xl"]; } else { $xl=NULL; }
-    if(isset($_POST["xxl"])){ $xll=$_POST["xxl"]; } else { $xxl=NULL; }
-    if(isset($_POST["xxxl"])){ $xll=$_POST["xxxl"]; } else { $xxxl=NULL; }
 ?>
-    <div id="content-without-carousel">
+    <div id="content-shopping">
         <div id="shopping-block">
             <div id="shopping-filters">
-                <h2>Encuentra lo que deseas</h2>
+                <h2>Buscalo a tu manera!</h2>
                 <form action="" method="post">
+                    <div class="cut-section">
+                        <select name="" id="cmb-categoria" class="form-control form-control-sm">
+                            <option value="0">Seleccione Categoria</option>
+                            <option value="1">Mujer</option>
+                            <option value="2">Hombre</option>
+                            <option value="3">Niño</option>
+                            <option value="4">Niña</option>
+                            <option value="5">Bebé</option>
+                            <option value="6">Juvenil</option>
+                        </select>
+                        <select name="prenda" id="cmb-prendas" class="form-control form-control-sm">
+                            <option value="0">Seleccione Prenda</option>
+                        </select>
+                        <p>Corte</p>
+                        <div id="checkbox-corte">
+                            Seleccione la prenda para ver cortes
+                        </div>
+                    </div>
                     <div class="size-section">
                         <p>Tallas</p>
                         <label class="check-group">XS
-                            <input name="xs" type="checkbox">
+                            <input id="chck-xs" type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                         <label class="check-group">S
-                            <input name="s" type="checkbox">
+                            <input id="chck-s" type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                         <label class="check-group">M
-                            <input name="m" type="checkbox">
+                            <input id="chck-m" type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                         <label class="check-group">L
-                            <input name="l" type="checkbox">
+                            <input id="chck-l" type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                         <label class="check-group">XL
-                            <input name="xl" type="checkbox">
+                            <input id="chck-xl" type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                         <label class="check-group">XXL
-                            <input name="xxl" type="checkbox">
+                            <input id="chck-xxl" type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                         <label class="check-group">XXXL
-                            <input name="xxxl" type="checkbox">
+                            <input id="chck-xxxl" type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                     </div>
                     <div class="cloth-section">
                         <p>Material</p>
-                        <?php GetClothForFilters(); ?>
-                    </div>
-                    <div class="cut-section">
-                        <select name="prenda" class="form-control form-control-sm">
-                            <option value="0">Seleccione prenda</option>
-                            <?php GetKindForFilters(); ?>
-                        </select>
-                        <p>Corte</p>
-                        <label class="check-group">Ajustado/Skinny
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="check-group">Recto/Normal
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="check-group">Slim/Semi-ajustado
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
+                        <div id="checkbox-tela">
+
+                        </div>
                     </div>
                     <div class="price-section">
                         <p>Seleccione un precio maximo</p>
@@ -77,15 +71,16 @@
                         <div class="slidecontainer">
                             <input type="range" min="50" max="1000" value="500" class="slider" id="price-range">
                         </div>
-                        <input type="submit" class="btn btn-principal" value="Filtrar"></input>
+                        <input type="submit" id="filtrar-contenido" class="btn btn-principal" value="Filtrar"></input>
                     </div>
                 </form>
             </div>
             <div id="show-filters">
-                <span class="fas fa-arrow-up" id="btn-filtros"></span>
+                <span class="fas fa-arrow-down" id="btn-filtros"></span>
             </div>'
             <div id="block-title">
-                <h2></h2>
+                <h2><?php if($temporada!=NULL) { echo "Lo mejor para esta temporada de ".$temporada; }
+                    if($categoria!=NULL) { echo "La mejor ropa para ".$categoria; } ?></h2>
             </div>
             <div id="block-products">
                 <?php ShowItems($temporada, $categoria); ?>

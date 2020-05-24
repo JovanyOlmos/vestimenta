@@ -1,47 +1,4 @@
 <?php
-    function GetClothForFilters() {
-        $conection=Connect();
-        $sql="SELECT * FROM tela;";
-        $query=mysqli_query($conection, $sql);
-            if ($query->num_rows > 0) {
-              while($row = $query->fetch_assoc()){
-                  echo '<label class="check-group">'.$row['tela'].'
-                            <input name="'.$row['tela'].'" type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>';
-              }
-            } else { echo "no hay datos"; }
-            mysqli_close($conection);
-    }
-
-    function GetKindForFilters() {
-        $conection=Connect();
-        $sql="SELECT * FROM prenda;";
-        $query=mysqli_query($conection, $sql);
-            if ($query->num_rows > 0) {
-              while($row = $query->fetch_assoc()){
-                  echo '<option value="'.$row['prenda'].'">'.$row['prenda'].'</option>';
-              }
-            } else { echo "no hay datos"; }
-            mysqli_close($conection);
-    }
-
-    function Url($temporada, $categoria) {
-        if($temporada!=NULL && $categoria!=NULL)
-        { 
-            return 'shopping.php?temporada='.$temporada.'&categoria='.$categoria;
-        }
-        else
-        {
-            if($temporada!=NULL) {
-                return 'shopping.php?temporada='.$temporada;
-            } else {
-                if($categoria!=NULL) {
-                    return 'shopping.php?categoria='.$categoria;
-                }
-            }
-        }
-    }
 
     function ShowItems($temporada, $categoria) {
         $conection=Connect();
