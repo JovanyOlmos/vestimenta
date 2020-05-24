@@ -21,6 +21,13 @@ class ScaffoldController extends AdminController
         $this->data = (new $this->model)->paginate("page: $page", 'order: id desc');
     }
 
+    public function json($page = 1)
+    {
+        View::response('json', NULL);
+        $this->data = (new $this->model)->paginate("page: $page", 'order: id desc');
+
+    }
+
     /**
      * Crea un Registro
      */
