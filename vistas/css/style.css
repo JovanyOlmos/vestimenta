@@ -22,6 +22,30 @@ Colores resaltantes
 body{
     background-color: #fff;
 }
+
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+    width: 100%;
+}
+
+th, td {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: #F2EDE4;
+}
+
+th {
+    background-color: #8C030E;
+    color: #fff;
+}
+
+td {
+    border-bottom: 1px solid rgb(104, 104, 104);
+}
 /********************************************************************/
 
 /*******************************Cabecera general***********************/
@@ -144,14 +168,33 @@ body{
 
 
 /*******************************Cuerpo del contenido**********************/
-/*Todo el contenido de la pagina debe estar dentro de la etiqueda content excepto las paginas de ingreso y registro*/
-#content{
+/*Todo el contenido de la pagina index o cualquier otra con carousel y solo con carousel
+ debe estar dentro de la etiqueta content-with-carousel, si la pagina no tiene carousel
+ usar la etiqueta content-without-carousel*/
+#content-with-carousel{
     position: absolute;
     z-index: 2;
     top: 100vh;
     background-color: #fff;
     width: 100%;
 }
+
+#content-without-carousel{
+    position: absolute;
+    z-index: 2;
+    top: 13vh;
+    width: 100%;
+    transition: top 1s;
+}
+
+#content-shopping{
+    position: absolute;
+    z-index: 2;
+    top: -41vh;
+    width: 100%;
+    transition: top 1s;
+}
+
 /*************************************************************************/
 
 
@@ -220,7 +263,7 @@ sirve para publicitar en la pagina*/
     margin-bottom: 1vh;
 }
 
-.form-control:focus, .btn:focus {
+.form-control:focus, .btn:focus, .activo .page-link:focus {
     border-color: #F24444;
     outline:none !important;
     outline-width: 0 !important;
@@ -230,6 +273,120 @@ sirve para publicitar en la pagina*/
     transition: ease-in 0.3s;
 }
 
+#number-box {
+    width: 5vw;
+}
+
+.check-group {
+    display: block;
+    position: relative;
+    padding-left: 4vh;
+    margin-bottom: 0.2vh;
+    cursor: pointer;
+    font-size: 2.5vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.check-group input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3vh;
+    border: 1px solid #000;
+}
+
+.check-group:hover {
+    color: #F24444;
+ }
+  
+.check-group input:checked ~ .checkmark {
+   background-color: #F24444;
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.check-group input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.check-group .checkmark:after {
+    left: 0.7vh;
+    top: 0px;
+    width: 1.3vh;
+    height: 3vh;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.slidecontainer {
+    width: 100%;
+}
+  
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider:hover {
+    opacity: 1;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #F24444;
+    cursor: pointer;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #F24444;
+    cursor: pointer;
+}
+
+.page-link, .page-item {
+    background-color: #fff;
+    color: #000;
+}
+
+.page-link:hover {
+    color: #F24444;
+    background-color: #fff;
+}
+
+.activo .page-link {
+    background-color: #F24444;
+    color: #fff;
+}
 
 /****************************Nuevos botones**********************************/
 .btn-principal {
@@ -497,8 +654,9 @@ sirve para publicitar en la pagina*/
 #special-footer a:hover, #special-header a:hover {
     color: #F24444;
 }
-/********************************************************************************************/
-/********************************************************************************************/
+/************************************************************************************************************/
+
+/*******************************************Shopping page****************************************************/
 
 #block-products {
     padding-left: 5vw;
@@ -552,7 +710,341 @@ sirve para publicitar en la pagina*/
     color: #F24444;
 }
 
-#buttons-item-footer {
+.buttons-item-footer {
     display: inline-block;
-    padding-left: 17vw;
+    padding-left: 14vw;
+}
+
+.add-it {
+    background-color: #ffffff;
+    border: 0px;
+}
+
+#shopping-filters {
+    position: relative;
+    top: 0;
+    height: 50vh;
+    padding-top: 5vh;
+    padding-right: 5vw;
+    padding-left: 10vw;
+    padding-bottom: 5vh;
+}
+
+#shopping-filters h2{
+    padding-bottom: 5vh;
+}
+
+.size-section, .cloth-section {
+    width: 15vw;
+}
+
+.cut-section, .price-section {
+    width: 25vw;
+}
+
+.cut-section .form-control {
+    width: 90%;
+}
+
+.size-section, .cloth-section, .cut-section, .price-section {
+    position: relative;
+    display: inline-block;
+    min-height: 35vh;
+    max-height: 35vh;
+    overflow-y: auto;
+    padding-top: 2vh;
+    padding-left: 1vw;
+}
+
+#show-filters {
+    text-align: center;
+    top: 5vh;
+    position: relative;
+}
+
+#show-filters span{
+    border-radius: 15vh;
+    border: 1px solid #555;
+    padding: 2vh;
+    cursor: pointer;
+}
+/******************************************************************************************/
+
+/**************************************About Us*********************************************/
+#about-top {
+    height: 80vh;
+    width: 100%;
+    background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/aboutus.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#about-top h1 {
+    color: #fff;
+    padding-top: 20vh;
+    font-size: 5vw;
+    text-align: center;
+}
+
+#about-top p {
+    color: #fff;
+    text-align: center;
+    font-size: 3vw;
+    padding-top: 7vh;
+}
+
+#mini-blog {
+    padding-top: 20vh;
+    padding-right: 25vw;
+    padding-left: 25vw;
+}
+
+#adorno {
+    background-color: #F27405;
+    height: 1vh;
+    width: 25%;
+}
+
+#mini-blog h1 {
+    text-align: center;
+    color: #000;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+}
+
+#mini-blog p {
+    font-size: 5vh;
+    text-align: center;
+    color: rgb(104, 104, 104);
+}
+
+/**********************************************FAQ page******************************************************/
+
+
+#faq-section {
+    list-style: none;
+    width: 25%;
+    padding-left: 0;
+    position: relative;
+    display: inline-block;
+    left: 3vw;
+    -webkit-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.3);
+}
+
+#faq-section li {
+    font-size: 4vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: #F2EDE4;
+    text-align: center;
+}
+
+#faq-section li a {
+    text-decoration: none;
+    color: #000;
+}
+
+#faq-section li a:hover {
+    color: #F24444;
+}
+
+#question-section {
+    position: absolute;
+    display: inline-block;
+    width: 68%;
+    left: 30vw;
+}
+
+#questions {
+    list-style: none;
+    position: absolute;
+    display: none;
+    transition: ease-in 0.5s;
+}
+
+#questions li{
+    border-bottom: 1px solid rgb(104, 104, 104);
+    font-size: 4vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 100%;
+}
+
+#questions li span {
+    margin-left: 45vw;
+    font-size: 14px;
+}
+
+#questions li a {
+    color: #000;
+    text-decoration: none;
+}
+
+#questions li a:hover {
+    color: #F24444;
+    text-decoration: none;
+}
+
+.respuestas {
+    display: none;
+}
+
+#questions #s1-r1:target, 
+#questions #s1-r2:target, 
+#questions #s1-r3:target, 
+#questions #s1-r4:target, 
+#questions #s1-r5:target,
+#questions #s2-r1:target, 
+#questions #s2-r2:target, 
+#questions #s2-r3:target, 
+#questions #s2-r4:target, 
+#questions #s2-r5:target,
+#questions #s3-r1:target, 
+#questions #s3-r2:target, 
+#questions #s3-r3:target, 
+#questions #s3-r4:target, 
+#questions #s3-r5:target,
+#questions #s4-r1:target, 
+#questions #s4-r2:target, 
+#questions #s4-r3:target, 
+#questions #s4-r4:target, 
+#questions #s4-r5:target,
+#questions #s5-r1:target, 
+#questions #s5-r2:target, 
+#questions #s5-r3:target, 
+#questions #s5-r4:target, 
+#questions #s5-r5:target,
+#questions #s6-r1:target, 
+#questions #s6-r2:target, 
+#questions #s6-r3:target, 
+#questions #s6-r4:target, 
+#questions #s6-r5:target {
+    display: block;
+    transition: ease-in 2s;
+}
+/*************************************************************************************************************/
+
+/*********************************************Ficha de contacto***********************************************/
+#block-contact {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: justify;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    left: 25vw;
+}
+
+#block-contact p {
+    font-size: 3vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+/**************************************************************************************************************/
+
+/*************************************************Carrito********************************************************/
+#cart-content {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+#img-product-cart {
+    height: 20vh;
+    width: 20vh;
+}
+
+#btn-delete {
+    color: #F24444;
+}
+
+#last-row {
+    border-bottom: none;
+}
+
+#cart-options {
+    padding-top: 2vh;
+    padding-left: 70%;
+}
+
+/**************************************************************************************************/
+
+/*************************************Scroll*******************************************************/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}   
+
+::-webkit-scrollbar-thumb {
+    background: #F24444; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #8C030E; 
+}
+/*******************************************************************************************************/
+
+/*********************************************Modal******************************************************/
+.my-modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 4;
+    padding-left: 25vw;
+    padding-top: 10vh;
+}
+
+.my-body-modal {
+    width: 50vw;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    overflow-y: auto;
+}
+
+.my-body-modal img {
+    width: 30vw;
+    height: 40vh;
+    margin-left: 5vw;
+    margin-top: 1vh;
+    -webkit-box-shadow: 2px 7px 60px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 7px 60px -10px rgba(0,0,0,0.75);
+    box-shadow: 2px 7px 60px -10px rgba(0,0,0,0.75);
+}
+
+.my-body-modal h2 {
+    text-align: center;
+}
+
+#descripciones {
+    padding-top: 5vh;
+}
+
+#botones-modal {
+    padding-left: 21vw;
+    padding-top: 2vh;
 }

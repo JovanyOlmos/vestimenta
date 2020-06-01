@@ -1,6 +1,9 @@
 <?php
   session_start();
   require("./vistas/layouts/main-header.php");
+  include("./vistas/controllers/connection.php");
+  include("./vistas/modules/shopping-items.php");
+  $temp=1; $cat=NULL;
 ?>
             <div id="carousel-fixed">
                 <div class="raw">
@@ -53,42 +56,7 @@
                     <h2>Encuentra lo que necesitas</h2>
                   </div>
                   <div id="block-products">
-                      <div id="item-card">
-                        <img src="./vistas/images/swetter.jpg" width="50" height="50" id="item-image">
-                        <h5>Saint Lauren</h5>
-                        <p>The structured shoulders and sleek detailing ensure a sharp silhouette. Team it with a silk pocket square and leather loafers.</p>
-                        <div id="item-footer">
-                          <h6>$370.99</h6>
-                          <div id="buttons-item-footer">
-                            <a href=""><i class="far fa-heart"></i></a>
-                            <a href=""><i class="fas fa-cart-plus"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="item-card">
-                        <img src="./vistas/images/jacket.jpg" width="50" height="50" id="item-image">
-                        <h5>Saint Lauren</h5>
-                        <p>The structured shoulders and sleek detailing ensure a sharp silhouette. Team it with a silk pocket square and leather loafers.</p>
-                        <div id="item-footer">
-                          <h6>$370.99</h6>
-                          <div id="buttons-item-footer">
-                            <a href=""><i class="far fa-heart"></i></a>
-                            <a href=""><i class="fas fa-cart-plus"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="item-card">
-                        <img src="./vistas/images/shirt.jpg" width="50" height="50" id="item-image">
-                        <h5>Gucci</h5>
-                        <p>The structured shoulders and sleek detailing ensure a sharp silhouette. Team it with a silk pocket square and leather loafers.</p>
-                        <div id="item-footer">
-                          <h6>$370.99</h6>
-                          <div id="buttons-item-footer">
-                            <a href=""><i class="far fa-heart"></i></a>
-                            <a href=""><i class="fas fa-cart-plus"></i></a>
-                          </div>
-                        </div>
-                      </div>
+                      <?php ShowItems($temp, $cat); ?>
                   </div>
                 </div>
                 <div id="content-block">

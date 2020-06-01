@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require('./vistas/layouts/main-header.php');
 ?>
     <div id="content-without-carousel">

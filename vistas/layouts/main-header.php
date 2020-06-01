@@ -26,7 +26,7 @@
                             <a class="nav-link" href="index.php">Inicio</a>
                           </li>
                           <li class="nav-item active">
-                            <a class="nav-link" href="#">Temporada</a>
+                            <form action="shopping.php" method="post"><input type="hidden" name="temporada" value="1"/><a class="temporada nav-link" href="#">Temporada</a></form>
                           </li>
                           <li class="nav-item active">
                             <a class="nav-link" href="#">Descuentos</a>
@@ -36,10 +36,11 @@
                               Categorias
                             </a>
                             <div  id="nav-dropmenu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mujer</a>
-                              <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Hombre</a>
-                              <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Niño/a</a>
-                              <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Bebé</a>
+                              <form action="shopping.php" method="post"><input type="hidden" name="categoria" value="1"/><a class="cat-mujer dropdown-item nav-link" id="item-dropmenu" href="#">Mujer</a></form>
+                              <form action="shopping.php" method="post"><input type="hidden" name="categoria" value="2"/><a class="cat-hombre dropdown-item nav-link" id="item-dropmenu" href="#">Hombre</a></form>
+                              <form action="shopping.php" method="post"><input type="hidden" name="categoria" value="3"/><a class="cat-nino dropdown-item nav-link" id="item-dropmenu" href="#">Niño</a></form>
+                              <form action="shopping.php" method="post"><input type="hidden" name="categoria" value="4"/><a class="cat-nina dropdown-item nav-link" id="item-dropmenu" href="#">Niña</a></form>
+                              <form action="shopping.php" method="post"><input type="hidden" name="categoria" value="5"/><a class="cat-bebe dropdown-item nav-link" id="item-dropmenu" href="#">Bebé</a></form>
                             </div>
                           </li>
                         </ul>
@@ -77,9 +78,9 @@
                                 </a>
                                 <div  id="nav-dropmenu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                   <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mi Perfil</a>
-                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mis Deseos</a>
-                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Mi Carrito</a>
-                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="#">Cerrar Sesion</a>
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="favorites.php">Mis Deseos</a>
+                                  <a class="dropdown-item nav-link" id="item-dropmenu" href="my-cart.php">Mi Carrito</a>
+                                  <a class="session-close dropdown-item nav-link" id="item-dropmenu" href="index.php">Cerrar Sesion</a>
                                 </div>
                               </li>';
                               }
@@ -90,29 +91,6 @@
             </header>
             <div class="my-modal">
                 <div class="my-body-modal">
-                  <h2>Swetter</h2>
-                  <img src="./vistas/images/swetter.jpg">
-                  <div id="descripciones">
-                    <p>Descripcion de la ropa</p>
-                    <p>Descripcion de tallas</p>
-                  </div>
-                  <form>
-                    <label>Escoja el numero de prendas</label>
-                    <input type="number" class="form-control" value="1"></input>
-                    <select class="form-control form-control-sm">
-                      <option value="0">Seleccione talla</option>
-                      <option value="xs">XS</option>
-                      <option value="s">S</option>
-                      <option value="m">M</option>
-                      <option value="l">L</option>
-                      <option value="xl">XL</option>
-                      <option value="xxl">XXL</option>
-                      <option value="xxxl">XXXL</option>
-                    </select>
-                    <div id="botones-modal">
-                      <a class="btn btn-secundario" id="cancel-modal" href="#">Cancelar</a>
-                      <input type="submit" class="btn btn-principal" value="Agregar al carrito"></input>
-                    </div>
-                  </form>
+                  
                 </div>
             </div>

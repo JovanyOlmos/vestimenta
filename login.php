@@ -1,8 +1,15 @@
 <?php
+  session_start();
+  if(isset($_SESSION['nickname']))
+  {
+    header("Location:index.php");
+  }
+  else
+  {
     require("./vistas/layouts/special-headerL.php");
     include("./vistas/controllers/connection.php");
     $conection=Connect();
-    if (!empty($_POST['usuario']) && !empty($_POST['password']))
+    if(!empty($_POST['usuario']) && !empty($_POST['password']))
     {
         $sql="SELECT * FROM usuarios WHERE nickname='".$_POST['usuario']."';";
         $query=mysqli_query($conection, $sql);
@@ -10,14 +17,15 @@
           while($row = $query->fetch_assoc()){
             if($row['password']==$_POST['password'])
             {
-              session_start();
               $_SESSION['nickname']=$_POST['usuario'];
+              $_SESSION['id']=$row['id'];
               mysqli_close($conection);
               header("Location:index.php");
             }
           }
         }
     }
+  }
 ?>
                 <div id="info-square">
                     <h1>Ya eres parte del club?</h1>

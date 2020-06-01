@@ -1,9 +1,10 @@
 <?php
+    session_start();
     require("./vistas/layouts/main-header.php");
     include("./vistas/controllers/connection.php");
     include("./vistas/modules/shopping-items.php");
-    if(isset($_GET["temporada"])){ $temporada=$_GET["temporada"]; } else { $temporada=NULL; }
-    if(isset($_GET["categoria"])){ $categoria=$_GET["categoria"]; } else { $categoria=NULL; }
+    if(isset($_POST["temporada"])){ $temporada=$_POST["temporada"]; } else { $temporada=NULL; }
+    if(isset($_POST["categoria"])){ $categoria=$_POST["categoria"]; } else { $categoria=NULL; }
 ?>
     <div id="content-shopping">
         <div id="shopping-block">
@@ -85,13 +86,6 @@
             <div id="block-products">
                 <?php ShowItems($temporada, $categoria); ?>
             </div>
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item activo"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                </ul>
-            </nav>
         </div>
 <?php
     require("./vistas/layouts/main-footer.php");

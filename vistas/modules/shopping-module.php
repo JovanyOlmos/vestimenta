@@ -1,6 +1,7 @@
 <?php
     include("../controllers/connection.php");
     $conection=Connect();
+
     if(isset($_POST["categoria"]))
     {
         $sql="SELECT * FROM prenda WHERE id_categoria=".$_POST['categoria'].";";
@@ -49,85 +50,108 @@
         echo $jsonstring;
     }
 
-    if(isset($_POST["xs"]) || isset($_POST["s"]) || isset($_POST["m"]) || isset($_POST["l"]) || isset($_POST["xl"]) || isset($_POST["xxl"]) || isset($_POST["xxxl"]) || isset($_POST["prenda"]) || isset($_POST["cortes2send"]) || isset($_POST["telas2send"]) || isset($_POST["precio"]))
+    if(isset($_POST["prenda_info"]))
     {
-        echo $_POST["xs"]."-".$_POST["s"]."-".$_POST["m"];
+        $sql="SELECT * FROM productos WHERE id=".$_POST["prenda_info"].";";
+        $result=mysqli_query($conection, $sql);
+        $json=array();
+        while($row=mysqli_fetch_array($result))
+        {
+            $json[]= array(
+                'id' => $row['id'],
+                'nombre' => $row['nombre'],
+                'imagen1' => $row['imagen1'],
+                'imagen2' => $row['imagen2'],
+                'imagen3' => $row['imagen3'],
+                'imagen4' => $row['imagen4'],
+                'imagen5' => $row['imagen5'],
+                'descripcion_prenda' => $row['descripcion_prenda'],
+                'descripcion_tallas' => $row['descripcion_tallas'],
+                'precio' => $row['precio']
+            );
+        }
+        $jsonstring = json_encode($json);
+        echo $jsonstring;
+    }
+
+    if(isset($_POST["xs"]) || isset($_POST["s"]) || isset($_POST["m"]) || isset($_POST["l"]) || isset($_POST["xl"]) || isset($_POST["xxl"]) || isset($_POST["xxxl"]) || isset($_POST["prenda"]) || isset($_POST["cortes2send"]) || isset($_POST["telas2send"]) || isset($_POST["precio"]) || isset($_POST["category"]))
+    {
         $sql="SELECT * FROM productos WHERE ";
         $indicadorAND=false;
-        if($_POST["xs"])
+        if($_POST["xs"]==true)
         {
-            $sql=$sql.$_POST["xs"]."xs>0 ";
+            $sql=$sql."n_piezas_xs>0 ";
             $indicadorAND=true;
         }
-        if($_POST["s"])
+        if($_POST["s"]==true)
         {
             if($indicadorAND)
             {
-                $sql=$sql."OR s>0 ";
+                $sql=$sql."OR n_piezas_s>0 ";
             }
             else
             {
-                $sql=$sql."s>0 ";
+                $sql=$sql."n_piezas_s>0 ";
                 $indicadorAND=true;
             }
         }
-        if($_POST["m"])
+        if($_POST["m"]==true)
         {
             if($indicadorAND)
             {
-                $sql=$sql."OR m>0 ";
+                $sql=$sql."OR n_piezas_m>0 ";
             }
             else
             {
-                $sql=$sql." m>0";
+                $sql=$sql."n_piezas_m>0 ";
                 $indicadorAND=true;
             }
         }
-        if($_POST["l"])
+        if($_POST["l"]==true)
         {
             if($indicadorAND)
             {
-                $sql=$sql."OR l>0 ";
+                $sql=$sql."OR n_piezas_l>0 ";
             }
             else
             {
-                $sql=$sql." l>0";
+                $sql=$sql."n_piezas_l>0 ";
                 $indicadorAND=true;
             }
         }
-        if($_POST["xl"])
+        if($_POST["xl"]==true)
         {
             if($indicadorAND)
             {
-                $sql=$sql."OR xl>0 ";
+                $sql=$sql."OR n_piezas_xl>0 ";
             }
             else
             {
-                $sql=$sql." xl>0";
+                $sql=$sql."n_piezas_xl>0 ";
                 $indicadorAND=true;
             }
         }
-        if($_POST["xxl"])
+        if($_POST["xxl"]==true)
         {
             if($indicadorAND)
             {
-                $sql=$sql."OR xxl>0 ";
+                $sql=$sql."OR n_piezas_xxl>0 ";
             }
             else
             {
-                $sql=$sql." xxl>0";
+                $sql=$sql."n_piezas_xxl>0 ";
                 $indicadorAND=true;
             }
         }
-        if($_POST["xxxl"])
+        if($_POST["xxxl"]==true)
         {
             if($indicadorAND)
             {
-                $sql=$sql."OR xxxl>0 ";
+                $sql=$sql."OR n_piezas_xxxl>0 ";
             }
             else
             {
-                $sql=$sql." xxxl>0";
+                $sql=$sql."n_piezas_xxxl>0 ";
                 $indicadorAND=true;
             }
         }
@@ -139,7 +163,7 @@
             }
             else
             {
-                $sql=$sql." id_prenda=".$_POST["prenda"]." ";
+                $sql=$sql."id_prenda=".$_POST["prenda"]." ";
                 $indicadorAND=true;
             }
         }
@@ -168,7 +192,7 @@
                 }
                 else
                 {
-                    $sql=$sql." id_tela=".$valor." ";
+                    $sql=$sql."id_tela=".$valor." ";
                     $indicadorAND=true;
                 }
             }
@@ -181,11 +205,40 @@
             }
             else
             {
-                $sql=$sql." precio<=".$_POST["precio"]." ";
+                $sql=$sql."precio<=".$_POST["precio"]." ";
+                $indicadorAND=true;
+            }
+        }
+        if(isset($_POST["category"]))
+        {
+            if($indicadorAND)
+            {
+                $sql=$sql."AND id_categoria=".$_POST["category"]." ";
+            }
+            else
+            {
+                $sql=$sql."id_categoria=".$_POST["category"]." ";
                 $indicadorAND=true;
             }
         }
         $sql=$sql.";";
-        echo $sql;
+        $result=mysqli_query($conection, $sql);
+        $json=array();
+        while($row=mysqli_fetch_array($result))
+        {
+            $json[]= array(
+                'id' => $row['id'],
+                'nombre' => $row['nombre'],
+                'imagen1' => $row['imagen1'],
+                'imagen2' => $row['imagen2'],
+                'imagen3' => $row['imagen3'],
+                'imagen4' => $row['imagen4'],
+                'imagen5' => $row['imagen5'],
+                'descripcion_prenda' => $row['descripcion_prenda'],
+                'precio' => $row['precio']
+            );
+        }
+        $jsonstring = json_encode($json);
+        echo $jsonstring;
     }
 ?>
